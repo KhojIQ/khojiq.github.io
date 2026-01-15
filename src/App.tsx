@@ -21,6 +21,10 @@ import {
   Check,
   Quote,
 } from 'lucide-react'
+import heroImg from './assets/hero.png'
+import dressImg from './assets/dress.png'
+import bagImg from './assets/bag.png'
+import shoesImg from './assets/shoes.png'
 
 function App() {
   const [isScrolled, setIsScrolled] = useState(false)
@@ -108,7 +112,7 @@ function App() {
         </div>
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-24 pb-16">
-          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+          <div className="grid lg:grid-cols-[1fr_1.1fr] gap-12 lg:gap-16 items-center">
             <div className="space-y-8">
               <div className="space-y-6">
                 <Badge variant="secondary" className="text-sm font-medium px-4 py-1.5 rounded-full">
@@ -155,37 +159,38 @@ function App() {
 
             {/* Hero Visual */}
             <div className="relative">
-              <div className="relative bg-gradient-to-br from-secondary to-muted p-8 rounded-2xl">
+              <div className="relative bg-gradient-to-br from-secondary/50 to-muted/50 p-8 rounded-3xl border border-border/50 shadow-sm">
                 {/* Search Demo Card */}
-                <Card className="shadow-2xl">
-                  <CardContent className="p-6 space-y-4">
-                    <div className="flex items-center gap-3 p-3 bg-secondary rounded-lg">
-                      <Search className="w-5 h-5 text-muted-foreground" />
-                      <span className="text-sm text-muted-foreground">
+                <Card className="shadow-2xl border-none bg-white dark:bg-card">
+                  <CardContent className="p-8 space-y-6">
+                    <div className="flex items-center gap-4 p-4 bg-secondary/50 rounded-xl border border-border/50">
+                      <Search className="w-6 h-6 text-primary" />
+                      <span className="text-base text-foreground/70 font-medium whitespace-nowrap">
                         "A dress for a winter wedding—elegant, not too formal"
                       </span>
                     </div>
                     <Separator />
-                    <div className="space-y-3">
-                      <p className="text-xs font-medium text-muted-foreground uppercase tracking-wide">
+                    <div className="space-y-4">
+                      <p className="text-sm font-bold text-muted-foreground uppercase tracking-widest">
                         Top matches
                       </p>
-                      <div className="grid grid-cols-3 gap-3">
-                        {[1, 2, 3].map((i) => (
-                          <div
-                            key={i}
-                            className="aspect-[3/4] bg-gradient-to-br from-muted to-secondary rounded-lg flex items-center justify-center"
-                          >
-                            <Shirt className="w-8 h-8 text-muted-foreground/40" />
-                          </div>
-                        ))}
+                      <div className="grid grid-cols-3 gap-4">
+                        <div className="aspect-[3/4] bg-secondary/30 rounded-xl overflow-hidden border border-border/50 group/item">
+                          <img src={dressImg} alt="Dress Match" className="w-full h-full object-cover opacity-90 group-hover/item:scale-110 transition-transform duration-500" />
+                        </div>
+                        <div className="aspect-[3/4] bg-secondary/30 rounded-xl overflow-hidden border border-border/50 group/item">
+                          <img src={bagImg} alt="Bag Match" className="w-full h-full object-cover opacity-90 group-hover/item:scale-110 transition-transform duration-500" />
+                        </div>
+                        <div className="aspect-[3/4] bg-secondary/30 rounded-xl overflow-hidden border border-border/50 group/item">
+                          <img src={shoesImg} alt="Shoes Match" className="w-full h-full object-cover opacity-90 group-hover/item:scale-110 transition-transform duration-500" />
+                        </div>
                       </div>
                     </div>
                   </CardContent>
                 </Card>
 
                 {/* Floating Badge */}
-                <div className="absolute -top-5 -right-5 bg-gradient-to-br from-primary via-accent to-primary text-primary-foreground px-5 py-2.5 rounded-full shadow-[0_0_25px_rgba(var(--primary),0.4)] border border-white/20 flex items-center gap-2 animate-bounce-subtle z-10">
+                <div className="absolute -top-4 -right-4 bg-gradient-to-br from-primary via-accent to-primary text-primary-foreground px-5 py-2.5 rounded-full shadow-[0_10px_30px_rgba(var(--primary),0.3)] border border-white/20 flex items-center gap-2 animate-bounce-subtle z-10">
                   <Sparkles className="w-4 h-4 text-white" />
                   <span className="text-sm font-bold tracking-wider uppercase">AI-Powered</span>
                 </div>
@@ -221,41 +226,38 @@ function App() {
 
             <div className="space-y-6">
               {/* What customers say */}
-              <Card className="border-l-4 border-l-primary">
-                <CardContent className="p-6">
-                  <p className="text-sm font-medium text-muted-foreground mb-4 uppercase tracking-wide">
+              <Card className="border-l-4 border-l-primary shadow-lg border-y-none border-r-none">
+                <CardContent className="p-8">
+                  <p className="text-base font-bold text-muted-foreground mb-6 uppercase tracking-widest">
                     What customers say
                   </p>
-                  <div className="space-y-3">
-                    <div className="flex items-start gap-3">
-                      <Quote className="w-4 h-4 text-primary shrink-0 mt-1" />
-                      <p className="text-sm italic">"I need a dress that feels elegant but not too formal."</p>
+                  <div className="space-y-6">
+                    <div className="flex items-start gap-4 p-4 bg-secondary/30 rounded-xl">
+                      <Quote className="w-5 h-5 text-primary shrink-0 mt-1" />
+                      <p className="text-lg italic text-foreground/80 leading-relaxed">"I need a dress that feels elegant but not too formal."</p>
                     </div>
-                    <div className="flex items-start gap-3">
-                      <Quote className="w-4 h-4 text-primary shrink-0 mt-1" />
-                      <p className="text-sm italic">"Comfortable shoes for a long day that still look stylish."</p>
-                    </div>
-                    <div className="flex items-start gap-3">
-                      <Quote className="w-4 h-4 text-primary shrink-0 mt-1" />
-                      <p className="text-sm italic">"A small bag that looks expensive under $150."</p>
+                    <div className="flex items-start gap-4 p-4 bg-secondary/30 rounded-xl">
+                      <Quote className="w-5 h-5 text-primary shrink-0 mt-1" />
+                      <p className="text-lg italic text-foreground/80 leading-relaxed">"Comfortable shoes for a long day that still look stylish."</p>
                     </div>
                   </div>
                 </CardContent>
               </Card>
 
               {/* What software asks */}
-              <Card className="bg-muted/50 border-dashed">
-                <CardContent className="p-6">
-                  <p className="text-sm font-medium text-muted-foreground mb-4 uppercase tracking-wide">
+              <Card className="bg-muted/30 border-dashed border-2">
+                <CardContent className="p-8">
+                  <p className="text-base font-bold text-muted-foreground mb-6 uppercase tracking-widest">
                     What software asks
                   </p>
-                  <div className="flex flex-wrap gap-2">
-                    <Badge variant="outline">Category?</Badge>
-                    <Badge variant="outline">Color?</Badge>
-                    <Badge variant="outline">Size?</Badge>
-                    <Badge variant="outline">Brand?</Badge>
+                  <div className="flex flex-wrap gap-3">
+                    {['Category', 'Color', 'Size', 'Brand', 'Price'].map(tag => (
+                      <Badge key={tag} variant="outline" className="px-4 py-2 text-sm border-muted-foreground/30 bg-background/50">
+                        {tag}?
+                      </Badge>
+                    ))}
                   </div>
-                  <p className="text-sm text-muted-foreground mt-4">
+                  <p className="text-lg text-muted-foreground mt-6 font-medium">
                     That's not how boutique selling works.
                   </p>
                 </CardContent>
@@ -391,68 +393,31 @@ function App() {
             </Card>
 
             {/* Visual Similarity */}
-            <Card className="overflow-hidden">
-              <CardContent className="p-0">
-                <div className="p-6 lg:p-8 space-y-6">
-                  <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center">
-                    <Eye className="w-6 h-6 text-primary" />
-                  </div>
-                  <div>
-                    <h3 className="text-2xl font-semibold mb-3">Visual Similarity Search</h3>
-                    <p className="text-lg text-muted-foreground">
-                      Bring a reference photo → find the closest matches in your store.
-                    </p>
-                  </div>
-                  <div className="grid grid-cols-2 gap-4">
-                    <div className="space-y-2">
-                      <p className="text-xs font-medium text-muted-foreground uppercase tracking-wide">Input</p>
-                      <div className="aspect-square bg-gradient-to-br from-muted to-secondary rounded-lg flex items-center justify-center">
-                        <Package className="w-10 h-10 text-muted-foreground/40" />
-                      </div>
-                      <p className="text-xs text-muted-foreground">"Like this bag, but smaller"</p>
-                    </div>
-                    <div className="space-y-2">
-                      <p className="text-xs font-medium text-muted-foreground uppercase tracking-wide">Output</p>
-                      <div className="grid grid-cols-2 gap-2">
-                        {[1, 2, 3, 4].map((i) => (
-                          <div key={i} className="aspect-square bg-gradient-to-br from-secondary to-muted rounded-lg flex items-center justify-center">
-                            <Package className="w-5 h-5 text-muted-foreground/30" />
-                          </div>
-                        ))}
-                      </div>
-                    </div>
-                  </div>
+            <Card className="overflow-hidden group hover:shadow-xl transition-all duration-300 border-none bg-secondary/20">
+              <CardContent className="p-10 lg:p-12 space-y-8">
+                <div className="w-16 h-16 bg-primary text-primary-foreground rounded-2xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
+                  <Eye className="w-8 h-8" />
+                </div>
+                <div>
+                  <h3 className="text-2xl font-bold mb-4">Visual Similarity Search</h3>
+                  <p className="text-lg text-muted-foreground leading-relaxed">
+                    Bring a reference photo → find the closest matches in your store instantly. No tagging required.
+                  </p>
                 </div>
               </CardContent>
             </Card>
 
             {/* Styling Assistance */}
-            <Card className="overflow-hidden">
-              <CardContent className="p-0">
-                <div className="p-6 lg:p-8 space-y-6">
-                  <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center">
-                    <Shirt className="w-6 h-6 text-primary" />
-                  </div>
-                  <div>
-                    <h3 className="text-2xl font-semibold mb-3">Built-in Styling Assistance</h3>
-                    <p className="text-lg text-muted-foreground">
-                      Turn inventory into outfits and recommendations—without extra effort.
-                    </p>
-                  </div>
-                  <div className="space-y-3">
-                    <div className="p-3 bg-secondary/50 rounded-lg">
-                      <p className="text-sm font-medium mb-1">Pairing suggestions</p>
-                      <p className="text-sm text-muted-foreground">
-                        "Pairs with: wide-leg trousers, minimal heels, structured tote"
-                      </p>
-                    </div>
-                    <div className="p-3 bg-secondary/50 rounded-lg">
-                      <p className="text-sm font-medium mb-1">Occasion-first recommendations</p>
-                      <p className="text-sm text-muted-foreground">
-                        Search by event: office, brunch, travel day, wedding guest, date night
-                      </p>
-                    </div>
-                  </div>
+            <Card className="overflow-hidden group hover:shadow-xl transition-all duration-300 border-none bg-secondary/20">
+              <CardContent className="p-10 lg:p-12 space-y-8">
+                <div className="w-16 h-16 bg-primary text-primary-foreground rounded-2xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
+                  <Shirt className="w-8 h-8" />
+                </div>
+                <div>
+                  <h3 className="text-2xl font-bold mb-4">Built-in Styling Assistance</h3>
+                  <p className="text-lg text-muted-foreground leading-relaxed">
+                    Turn inventory into outfits and recommendations—AI understands what goes together.
+                  </p>
                 </div>
               </CardContent>
             </Card>
