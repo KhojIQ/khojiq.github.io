@@ -11,7 +11,6 @@ import {
   Eye,
   MessageSquare,
   Shirt,
-  Package,
   Tags,
   MapPin,
   Users,
@@ -21,7 +20,6 @@ import {
   Check,
   Quote,
 } from 'lucide-react'
-import heroImg from './assets/hero.png'
 import dressImg from './assets/dress.png'
 import bagImg from './assets/bag.png'
 import shoesImg from './assets/shoes.png'
