@@ -38,11 +38,10 @@ function App() {
     <div className="min-h-screen bg-background">
       {/* Navigation */}
       <nav
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-          isScrolled
-            ? 'bg-background/95 backdrop-blur-md shadow-sm border-b'
-            : 'bg-transparent'
-        }`}
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled
+          ? 'bg-background/95 backdrop-blur-md shadow-sm border-b'
+          : 'bg-transparent'
+          }`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16 lg:h-20">
@@ -50,21 +49,21 @@ function App() {
               <div className="w-8 h-8 bg-primary rounded-sm flex items-center justify-center">
                 <Eye className="w-5 h-5 text-primary-foreground" />
               </div>
-              <span className="text-xl font-semibold tracking-tight">KhojIQ</span>
+              <span className="text-2xl font-bold tracking-tight">KhojIQ</span>
             </a>
 
             {/* Desktop Nav */}
-            <div className="hidden md:flex items-center gap-8">
-              <a href="#problem" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+            <div className="hidden md:flex items-center gap-10">
+              <a href="#problem" className="text-base font-medium text-muted-foreground hover:text-primary transition-colors">
                 The Problem
               </a>
-              <a href="#how-it-works" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+              <a href="#how-it-works" className="text-base font-medium text-muted-foreground hover:text-primary transition-colors">
                 How It Works
               </a>
-              <a href="#features" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+              <a href="#features" className="text-base font-medium text-muted-foreground hover:text-primary transition-colors">
                 Features
               </a>
-              <a href="#use-cases" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+              <a href="#use-cases" className="text-base font-medium text-muted-foreground hover:text-primary transition-colors">
                 Use Cases
               </a>
             </div>
@@ -83,17 +82,17 @@ function App() {
         {/* Mobile Menu */}
         {mobileMenuOpen && (
           <div className="md:hidden bg-background border-b">
-            <div className="px-4 py-4 space-y-3">
-              <a href="#problem" className="block text-sm py-2" onClick={() => setMobileMenuOpen(false)}>
+            <div className="px-6 py-6 space-y-4">
+              <a href="#problem" className="block text-lg font-medium py-2" onClick={() => setMobileMenuOpen(false)}>
                 The Problem
               </a>
-              <a href="#how-it-works" className="block text-sm py-2" onClick={() => setMobileMenuOpen(false)}>
+              <a href="#how-it-works" className="block text-lg font-medium py-2" onClick={() => setMobileMenuOpen(false)}>
                 How It Works
               </a>
-              <a href="#features" className="block text-sm py-2" onClick={() => setMobileMenuOpen(false)}>
+              <a href="#features" className="block text-lg font-medium py-2" onClick={() => setMobileMenuOpen(false)}>
                 Features
               </a>
-              <a href="#use-cases" className="block text-sm py-2" onClick={() => setMobileMenuOpen(false)}>
+              <a href="#use-cases" className="block text-lg font-medium py-2" onClick={() => setMobileMenuOpen(false)}>
                 Use Cases
               </a>
             </div>
@@ -111,16 +110,16 @@ function App() {
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-24 pb-16">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             <div className="space-y-8">
-              <div className="space-y-4">
-                <Badge variant="secondary" className="text-xs font-medium px-3 py-1">
+              <div className="space-y-6">
+                <Badge variant="secondary" className="text-sm font-medium px-4 py-1.5 rounded-full">
                   Vision-based search for boutiques
                 </Badge>
-                <h1 className="text-4xl sm:text-5xl lg:text-6xl font-serif font-medium leading-tight text-balance">
+                <h1 className="text-5xl sm:text-6xl lg:text-7xl font-serif font-medium leading-[1.1] text-balance">
                   Sell by <span className="italic text-primary">vibe.</span>
                   <br />
                   Not by filters.
                 </h1>
-                <p className="text-lg text-muted-foreground max-w-lg leading-relaxed">
+                <p className="text-xl text-muted-foreground max-w-xl leading-relaxed">
                   KhojIQ turns photos of clothing, shoes, and bags into instant, natural-language search—so you find the perfect match in seconds.
                 </p>
               </div>
@@ -186,8 +185,9 @@ function App() {
                 </Card>
 
                 {/* Floating Badge */}
-                <div className="absolute -top-4 -right-4 bg-primary text-primary-foreground px-4 py-2 rounded-full shadow-lg">
-                  <span className="text-sm font-medium">AI-Powered</span>
+                <div className="absolute -top-5 -right-5 bg-gradient-to-br from-primary via-accent to-primary text-primary-foreground px-5 py-2.5 rounded-full shadow-[0_0_25px_rgba(var(--primary),0.4)] border border-white/20 flex items-center gap-2 animate-bounce-subtle z-10">
+                  <Sparkles className="w-4 h-4 text-white" />
+                  <span className="text-sm font-bold tracking-wider uppercase">AI-Powered</span>
                 </div>
               </div>
             </div>
@@ -200,18 +200,18 @@ function App() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div className="space-y-8">
-              <div className="space-y-4">
-                <p className="text-sm font-medium text-primary uppercase tracking-wide">
+              <div className="space-y-6">
+                <p className="text-base font-semibold text-primary uppercase tracking-widest">
                   The boutique problem
                 </p>
-                <h2 className="text-3xl sm:text-4xl lg:text-5xl font-serif font-medium leading-tight">
+                <h2 className="text-4xl sm:text-5xl lg:text-6xl font-serif font-medium leading-tight text-balance">
                   Customers speak in{' '}
                   <span className="italic">occasions</span> and{' '}
                   <span className="italic">feelings</span>—not dropdowns.
                 </h2>
               </div>
 
-              <div className="space-y-4 text-muted-foreground">
+              <div className="space-y-6 text-lg text-muted-foreground leading-relaxed">
                 <p>Inventory is unique and constantly changing—new drops, limited sizes, one-off bags.</p>
                 <p>Static fields miss what matters: silhouette, vibe, pairing, and occasion.</p>
                 <p>Staff lose time hunting racks while the customer's attention fades.</p>
@@ -268,14 +268,14 @@ function App() {
       {/* How It Works */}
       <section id="how-it-works" className="py-24 lg:py-32">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-3xl mx-auto mb-16">
-            <p className="text-sm font-medium text-primary uppercase tracking-wide mb-4">
+          <div className="text-center max-w-4xl mx-auto mb-20">
+            <p className="text-base font-semibold text-primary uppercase tracking-widest mb-4">
               Meet KhojIQ
             </p>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-serif font-medium mb-6">
+            <h2 className="text-4xl sm:text-5xl lg:text-6xl font-serif font-medium mb-8">
               A visual brain for your boutique
             </h2>
-            <p className="text-lg text-muted-foreground">
+            <p className="text-xl text-muted-foreground leading-relaxed">
               Built for clothing, shoes, and bags. No tedious cataloging. No endless dropdowns.
               Just photos → meaning → instant search.
             </p>
@@ -312,11 +312,11 @@ function App() {
       {/* Features */}
       <section id="features" className="py-24 lg:py-32 bg-secondary/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-3xl mx-auto mb-16">
-            <p className="text-sm font-medium text-primary uppercase tracking-wide mb-4">
+          <div className="text-center max-w-4xl mx-auto mb-20">
+            <p className="text-base font-semibold text-primary uppercase tracking-widest mb-4">
               Powerful Features
             </p>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-serif font-medium">
+            <h2 className="text-4xl sm:text-5xl lg:text-6xl font-serif font-medium">
               Search the way customers ask
             </h2>
           </div>
@@ -331,8 +331,8 @@ function App() {
                     <MessageSquare className="w-6 h-6 text-primary" />
                   </div>
                   <div>
-                    <h3 className="text-xl font-semibold mb-2">Natural Language Search</h3>
-                    <p className="text-muted-foreground">
+                    <h3 className="text-2xl font-semibold mb-3">Natural Language Search</h3>
+                    <p className="text-lg text-muted-foreground">
                       Search across clothing, shoes, and bags using natural queries.
                     </p>
                   </div>
@@ -360,8 +360,8 @@ function App() {
                     <Sparkles className="w-6 h-6 text-primary" />
                   </div>
                   <div>
-                    <h3 className="text-xl font-semibold mb-2">Auto-descriptions That Sell</h3>
-                    <p className="text-muted-foreground">
+                    <h3 className="text-2xl font-semibold mb-3">Auto-descriptions That Sell</h3>
+                    <p className="text-lg text-muted-foreground">
                       AI generates searchable, stylist-friendly descriptions from photos.
                     </p>
                   </div>
@@ -398,8 +398,8 @@ function App() {
                     <Eye className="w-6 h-6 text-primary" />
                   </div>
                   <div>
-                    <h3 className="text-xl font-semibold mb-2">Visual Similarity Search</h3>
-                    <p className="text-muted-foreground">
+                    <h3 className="text-2xl font-semibold mb-3">Visual Similarity Search</h3>
+                    <p className="text-lg text-muted-foreground">
                       Bring a reference photo → find the closest matches in your store.
                     </p>
                   </div>
@@ -434,8 +434,8 @@ function App() {
                     <Shirt className="w-6 h-6 text-primary" />
                   </div>
                   <div>
-                    <h3 className="text-xl font-semibold mb-2">Built-in Styling Assistance</h3>
-                    <p className="text-muted-foreground">
+                    <h3 className="text-2xl font-semibold mb-3">Built-in Styling Assistance</h3>
+                    <p className="text-lg text-muted-foreground">
                       Turn inventory into outfits and recommendations—without extra effort.
                     </p>
                   </div>
@@ -473,8 +473,8 @@ function App() {
                     <Icon className="w-5 h-5 text-muted-foreground" />
                   </div>
                   <div>
-                    <p className="font-medium text-sm">{title}</p>
-                    <p className="text-sm text-muted-foreground">{desc}</p>
+                    <p className="font-semibold text-base">{title}</p>
+                    <p className="text-base text-muted-foreground">{desc}</p>
                   </div>
                 </div>
               ))}
@@ -486,11 +486,11 @@ function App() {
       {/* Outcomes */}
       <section className="py-24 lg:py-32">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-3xl mx-auto mb-16">
-            <p className="text-sm font-medium text-primary uppercase tracking-wide mb-4">
+          <div className="text-center max-w-4xl mx-auto mb-20">
+            <p className="text-base font-semibold text-primary uppercase tracking-widest mb-4">
               Real Results
             </p>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-serif font-medium mb-6">
+            <h2 className="text-4xl sm:text-5xl lg:text-6xl font-serif font-medium mb-8">
               Faster matches → better service → more sales
             </h2>
           </div>
@@ -529,10 +529,10 @@ function App() {
               },
             ].map(({ metric, title, desc }) => (
               <Card key={metric} className="group hover:shadow-lg transition-shadow">
-                <CardContent className="p-6 space-y-4">
-                  <Badge variant="secondary" className="font-medium">{metric}</Badge>
-                  <h3 className="text-lg font-semibold">{title}</h3>
-                  <p className="text-sm text-muted-foreground">{desc}</p>
+                <CardContent className="p-8 space-y-5">
+                  <Badge variant="secondary" className="font-bold text-xs uppercase tracking-widest">{metric}</Badge>
+                  <h3 className="text-2xl font-semibold">{title}</h3>
+                  <p className="text-base text-muted-foreground leading-relaxed">{desc}</p>
                 </CardContent>
               </Card>
             ))}
@@ -543,14 +543,14 @@ function App() {
       {/* Use Cases */}
       <section id="use-cases" className="py-24 lg:py-32 bg-secondary/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-3xl mx-auto mb-16">
-            <p className="text-sm font-medium text-primary uppercase tracking-wide mb-4">
+          <div className="text-center max-w-4xl mx-auto mb-20">
+            <p className="text-base font-semibold text-primary uppercase tracking-widest mb-4">
               Designed for fashion retail
             </p>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-serif font-medium mb-6">
+            <h2 className="text-4xl sm:text-5xl lg:text-6xl font-serif font-medium mb-8">
               Perfect for businesses with curated inventory
             </h2>
-            <p className="text-lg text-muted-foreground">
+            <p className="text-xl text-muted-foreground leading-relaxed">
               If your store wins on taste, KhojIQ helps you find that taste instantly and repeatably.
             </p>
           </div>
@@ -564,9 +564,9 @@ function App() {
               { title: 'Pop-up Stores', desc: 'Quick setup, immediate search capability' },
               { title: 'Stylists', desc: 'Inventory closets with instant client matching' },
             ].map(({ title, desc }) => (
-              <div key={title} className="p-6 bg-background rounded-xl">
-                <h3 className="font-semibold mb-2">{title}</h3>
-                <p className="text-sm text-muted-foreground">{desc}</p>
+              <div key={title} className="p-8 bg-background rounded-2xl shadow-sm border border-border/50 hover:shadow-md transition-shadow">
+                <h3 className="text-xl font-semibold mb-3">{title}</h3>
+                <p className="text-base text-muted-foreground">{desc}</p>
               </div>
             ))}
           </div>
@@ -577,10 +577,10 @@ function App() {
       <section className="py-24 lg:py-32 relative overflow-hidden">
         <div className="absolute inset-0 gradient-mesh" />
         <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-serif font-medium mb-6">
+          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-serif font-medium mb-8 leading-tight text-balance">
             Turn your clothing, shoes, and bags into instant, natural-language search
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
             Best for boutiques selling apparel, shoes, and bags.
           </p>
         </div>
@@ -594,15 +594,15 @@ function App() {
               <div className="w-8 h-8 bg-primary rounded-sm flex items-center justify-center">
                 <Eye className="w-5 h-5 text-primary-foreground" />
               </div>
-              <span className="text-xl font-semibold tracking-tight">KhojIQ</span>
+              <span className="text-2xl font-bold tracking-tight">KhojIQ</span>
             </div>
 
-            <p className="text-sm text-muted-foreground">
+            <p className="text-base text-muted-foreground font-medium">
               Vision-based product search for boutiques
             </p>
 
-            <p className="text-sm text-muted-foreground">
-              © {new Date().getFullYear()} KhojIQ. All rights reserved.
+            <p className="text-base text-muted-foreground">
+              © {new Date().getFullYear()} KhojIQ. Built for retail.
             </p>
           </div>
         </div>
