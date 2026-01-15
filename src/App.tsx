@@ -133,22 +133,22 @@ function App() {
               </div>
 
               {/* Quick Flow */}
-              <div className="flex flex-wrap gap-6 pt-4">
+              <div className="flex flex-col sm:flex-row flex-wrap gap-4 sm:gap-6 pt-4">
                 <div className="flex items-center gap-2">
-                  <div className="w-10 h-10 rounded-full bg-secondary flex items-center justify-center">
-                    <Camera className="w-5 h-5 text-muted-foreground" />
+                  <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-secondary flex items-center justify-center shrink-0">
+                    <Camera className="w-4 h-4 sm:w-5 sm:h-5 text-muted-foreground" />
                   </div>
                   <span className="text-sm font-medium">Snap inventory</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <div className="w-10 h-10 rounded-full bg-secondary flex items-center justify-center">
-                    <Sparkles className="w-5 h-5 text-muted-foreground" />
+                  <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-secondary flex items-center justify-center shrink-0">
+                    <Sparkles className="w-4 h-4 sm:w-5 sm:h-5 text-muted-foreground" />
                   </div>
                   <span className="text-sm font-medium">Auto-describe</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <div className="w-10 h-10 rounded-full bg-secondary flex items-center justify-center">
-                    <Search className="w-5 h-5 text-muted-foreground" />
+                  <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-secondary flex items-center justify-center shrink-0">
+                    <Search className="w-4 h-4 sm:w-5 sm:h-5 text-muted-foreground" />
                   </div>
                   <span className="text-sm font-medium">Search naturally</span>
                 </div>
@@ -157,22 +157,22 @@ function App() {
 
             {/* Hero Visual */}
             <div className="relative">
-              <div className="relative bg-gradient-to-br from-secondary/50 to-muted/50 p-8 rounded-3xl border border-border/50 shadow-sm">
+              <div className="relative bg-gradient-to-br from-secondary/50 to-muted/50 p-4 sm:p-6 lg:p-8 rounded-2xl sm:rounded-3xl border border-border/50 shadow-sm">
                 {/* Search Demo Card */}
                 <Card className="shadow-2xl border-none bg-white dark:bg-card">
-                  <CardContent className="p-8 space-y-6">
-                    <div className="flex items-center gap-4 p-4 bg-secondary/50 rounded-xl border border-border/50">
-                      <Search className="w-6 h-6 text-primary" />
-                      <span className="text-base text-foreground/70 font-medium whitespace-nowrap">
+                  <CardContent className="p-4 sm:p-6 lg:p-8 space-y-4 sm:space-y-6">
+                    <div className="flex items-center gap-3 sm:gap-4 p-3 sm:p-4 bg-secondary/50 rounded-xl border border-border/50">
+                      <Search className="w-5 h-5 sm:w-6 sm:h-6 text-primary shrink-0" />
+                      <span className="text-sm sm:text-base text-foreground/70 font-medium">
                         "A dress for a winter wedding—elegant, not too formal"
                       </span>
                     </div>
                     <Separator />
-                    <div className="space-y-4">
-                      <p className="text-sm font-bold text-muted-foreground uppercase tracking-widest">
+                    <div className="space-y-3 sm:space-y-4">
+                      <p className="text-xs sm:text-sm font-bold text-muted-foreground uppercase tracking-widest">
                         Top matches
                       </p>
-                      <div className="grid grid-cols-3 gap-4">
+                      <div className="grid grid-cols-3 gap-2 sm:gap-4">
                         <div className="aspect-[3/4] bg-secondary/30 rounded-xl overflow-hidden border border-border/50 group/item">
                           <img src={dressImg} alt="Dress Match" className="w-full h-full object-cover opacity-90 group-hover/item:scale-110 transition-transform duration-500" />
                         </div>
@@ -188,9 +188,9 @@ function App() {
                 </Card>
 
                 {/* Floating Badge */}
-                <div className="absolute -top-4 -right-4 bg-gradient-to-br from-primary via-accent to-primary text-primary-foreground px-5 py-2.5 rounded-full shadow-[0_10px_30px_rgba(var(--primary),0.3)] border border-white/20 flex items-center gap-2 animate-bounce-subtle z-10">
-                  <Sparkles className="w-4 h-4 text-white" />
-                  <span className="text-sm font-bold tracking-wider uppercase">AI-Powered</span>
+                <div className="absolute -top-3 -right-2 sm:-top-4 sm:-right-4 bg-gradient-to-br from-primary via-accent to-primary text-primary-foreground px-3 py-1.5 sm:px-5 sm:py-2.5 rounded-full shadow-[0_10px_30px_rgba(var(--primary),0.3)] border border-white/20 flex items-center gap-1.5 sm:gap-2 animate-bounce-subtle z-10">
+                  <Sparkles className="w-3 h-3 sm:w-4 sm:h-4 text-white" />
+                  <span className="text-xs sm:text-sm font-bold tracking-wider uppercase">AI-Powered</span>
                 </div>
               </div>
             </div>
@@ -199,7 +199,7 @@ function App() {
       </section>
 
       {/* Problem Section */}
-      <section id="problem" className="py-24 lg:py-32 bg-secondary/30">
+      <section id="problem" className="py-16 sm:py-24 lg:py-32 bg-secondary/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div className="space-y-8">
@@ -225,7 +225,7 @@ function App() {
             <div className="space-y-6">
               {/* What customers say */}
               <Card className="border-l-4 border-l-primary shadow-lg border-y-none border-r-none">
-                <CardContent className="p-8">
+                <CardContent className="p-5 sm:p-8">
                   <p className="text-base font-bold text-muted-foreground mb-6 uppercase tracking-widest">
                     What customers say
                   </p>
@@ -244,7 +244,7 @@ function App() {
 
               {/* What software asks */}
               <Card className="bg-muted/30 border-dashed border-2">
-                <CardContent className="p-8">
+                <CardContent className="p-5 sm:p-8">
                   <p className="text-base font-bold text-muted-foreground mb-6 uppercase tracking-widest">
                     What software asks
                   </p>
@@ -266,16 +266,16 @@ function App() {
       </section>
 
       {/* How It Works */}
-      <section id="how-it-works" className="py-24 lg:py-32">
+      <section id="how-it-works" className="py-16 sm:py-24 lg:py-32">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-4xl mx-auto mb-20">
-            <p className="text-base font-semibold text-primary uppercase tracking-widest mb-4">
+          <div className="text-center max-w-4xl mx-auto mb-12 sm:mb-20">
+            <p className="text-sm sm:text-base font-semibold text-primary uppercase tracking-widest mb-3 sm:mb-4">
               Meet KhojIQ
             </p>
-            <h2 className="text-4xl sm:text-5xl lg:text-6xl font-serif font-medium mb-8">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-serif font-medium mb-5 sm:mb-8">
               A visual brain for your boutique
             </h2>
-            <p className="text-xl text-muted-foreground leading-relaxed">
+            <p className="text-lg sm:text-xl text-muted-foreground leading-relaxed">
               Built for clothing, shoes, and bags. No tedious cataloging. No endless dropdowns.
               Just photos → meaning → instant search.
             </p>
@@ -310,13 +310,13 @@ function App() {
       </section>
 
       {/* Features */}
-      <section id="features" className="py-24 lg:py-32 bg-secondary/30">
+      <section id="features" className="py-16 sm:py-24 lg:py-32 bg-secondary/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-4xl mx-auto mb-20">
-            <p className="text-base font-semibold text-primary uppercase tracking-widest mb-4">
+          <div className="text-center max-w-4xl mx-auto mb-12 sm:mb-20">
+            <p className="text-sm sm:text-base font-semibold text-primary uppercase tracking-widest mb-3 sm:mb-4">
               Powerful Features
             </p>
-            <h2 className="text-4xl sm:text-5xl lg:text-6xl font-serif font-medium">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-serif font-medium">
               Search the way customers ask
             </h2>
           </div>
@@ -326,7 +326,7 @@ function App() {
             {/* Natural Language Search */}
             <Card className="overflow-hidden">
               <CardContent className="p-0">
-                <div className="p-6 lg:p-8 space-y-6">
+                <div className="p-5 sm:p-6 lg:p-8 space-y-5 sm:space-y-6">
                   <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center">
                     <MessageSquare className="w-6 h-6 text-primary" />
                   </div>
@@ -355,7 +355,7 @@ function App() {
             {/* Auto-descriptions */}
             <Card className="overflow-hidden">
               <CardContent className="p-0">
-                <div className="p-6 lg:p-8 space-y-6">
+                <div className="p-5 sm:p-6 lg:p-8 space-y-5 sm:space-y-6">
                   <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center">
                     <Sparkles className="w-6 h-6 text-primary" />
                   </div>
@@ -392,9 +392,9 @@ function App() {
 
             {/* Visual Similarity */}
             <Card className="overflow-hidden group hover:shadow-xl transition-all duration-300 border-none bg-secondary/20">
-              <CardContent className="p-10 lg:p-12 space-y-8">
-                <div className="w-16 h-16 bg-primary text-primary-foreground rounded-2xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
-                  <Eye className="w-8 h-8" />
+              <CardContent className="p-6 sm:p-10 lg:p-12 space-y-6 sm:space-y-8">
+                <div className="w-14 h-14 sm:w-16 sm:h-16 bg-primary text-primary-foreground rounded-2xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
+                  <Eye className="w-7 h-7 sm:w-8 sm:h-8" />
                 </div>
                 <div>
                   <h3 className="text-2xl font-bold mb-4">Visual Similarity Search</h3>
@@ -407,9 +407,9 @@ function App() {
 
             {/* Styling Assistance */}
             <Card className="overflow-hidden group hover:shadow-xl transition-all duration-300 border-none bg-secondary/20">
-              <CardContent className="p-10 lg:p-12 space-y-8">
-                <div className="w-16 h-16 bg-primary text-primary-foreground rounded-2xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
-                  <Shirt className="w-8 h-8" />
+              <CardContent className="p-6 sm:p-10 lg:p-12 space-y-6 sm:space-y-8">
+                <div className="w-14 h-14 sm:w-16 sm:h-16 bg-primary text-primary-foreground rounded-2xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
+                  <Shirt className="w-7 h-7 sm:w-8 sm:h-8" />
                 </div>
                 <div>
                   <h3 className="text-2xl font-bold mb-4">Built-in Styling Assistance</h3>
@@ -422,22 +422,22 @@ function App() {
           </div>
 
           {/* Ops Features */}
-          <div className="mt-16">
-            <h3 className="text-xl font-semibold text-center mb-8">Ops features that prevent "oops" moments</h3>
-            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="mt-12 sm:mt-16">
+            <h3 className="text-lg sm:text-xl font-semibold text-center mb-6 sm:mb-8">Ops features that prevent "oops" moments</h3>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
               {[
                 { icon: Tags, title: 'Availability Status', desc: 'Available • Reserved • Sold' },
                 { icon: MapPin, title: 'Location Notes', desc: 'Floor • Backroom • Rack/Section' },
                 { icon: Users, title: 'Customer Shortlist', desc: 'Save picks, mark try-on, note preferences' },
                 { icon: TrendingUp, title: 'Smart Analytics', desc: 'See what customers ask for most' },
               ].map(({ icon: Icon, title, desc }) => (
-                <div key={title} className="flex items-start gap-4 p-4 bg-background rounded-lg">
-                  <div className="w-10 h-10 bg-secondary rounded-lg flex items-center justify-center shrink-0">
-                    <Icon className="w-5 h-5 text-muted-foreground" />
+                <div key={title} className="flex items-start gap-3 sm:gap-4 p-4 bg-background rounded-lg">
+                  <div className="w-9 h-9 sm:w-10 sm:h-10 bg-secondary rounded-lg flex items-center justify-center shrink-0">
+                    <Icon className="w-4 h-4 sm:w-5 sm:h-5 text-muted-foreground" />
                   </div>
                   <div>
-                    <p className="font-semibold text-base">{title}</p>
-                    <p className="text-base text-muted-foreground">{desc}</p>
+                    <p className="font-semibold text-sm sm:text-base">{title}</p>
+                    <p className="text-sm sm:text-base text-muted-foreground">{desc}</p>
                   </div>
                 </div>
               ))}
@@ -447,13 +447,13 @@ function App() {
       </section>
 
       {/* Outcomes */}
-      <section className="py-24 lg:py-32">
+      <section className="py-16 sm:py-24 lg:py-32">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-4xl mx-auto mb-20">
-            <p className="text-base font-semibold text-primary uppercase tracking-widest mb-4">
+          <div className="text-center max-w-4xl mx-auto mb-12 sm:mb-20">
+            <p className="text-sm sm:text-base font-semibold text-primary uppercase tracking-widest mb-3 sm:mb-4">
               Real Results
             </p>
-            <h2 className="text-4xl sm:text-5xl lg:text-6xl font-serif font-medium mb-8">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-serif font-medium mb-5 sm:mb-8">
               Faster matches → better service → more sales
             </h2>
           </div>
@@ -492,7 +492,7 @@ function App() {
               },
             ].map(({ metric, title, desc }) => (
               <Card key={metric} className="group hover:shadow-lg transition-shadow">
-                <CardContent className="p-8 space-y-5">
+                <CardContent className="p-5 sm:p-8 space-y-4 sm:space-y-5">
                   <Badge variant="secondary" className="font-bold text-xs uppercase tracking-widest">{metric}</Badge>
                   <h3 className="text-2xl font-semibold">{title}</h3>
                   <p className="text-base text-muted-foreground leading-relaxed">{desc}</p>
@@ -504,16 +504,16 @@ function App() {
       </section>
 
       {/* Use Cases */}
-      <section id="use-cases" className="py-24 lg:py-32 bg-secondary/30">
+      <section id="use-cases" className="py-16 sm:py-24 lg:py-32 bg-secondary/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-4xl mx-auto mb-20">
-            <p className="text-base font-semibold text-primary uppercase tracking-widest mb-4">
+          <div className="text-center max-w-4xl mx-auto mb-12 sm:mb-20">
+            <p className="text-sm sm:text-base font-semibold text-primary uppercase tracking-widest mb-3 sm:mb-4">
               Designed for fashion retail
             </p>
-            <h2 className="text-4xl sm:text-5xl lg:text-6xl font-serif font-medium mb-8">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-serif font-medium mb-5 sm:mb-8">
               Perfect for businesses with curated inventory
             </h2>
-            <p className="text-xl text-muted-foreground leading-relaxed">
+            <p className="text-lg sm:text-xl text-muted-foreground leading-relaxed">
               If your store wins on taste, KhojIQ helps you find that taste instantly and repeatably.
             </p>
           </div>
@@ -527,9 +527,9 @@ function App() {
               { title: 'Pop-up Stores', desc: 'Quick setup, immediate search capability' },
               { title: 'Stylists', desc: 'Inventory closets with instant client matching' },
             ].map(({ title, desc }) => (
-              <div key={title} className="p-8 bg-background rounded-2xl shadow-sm border border-border/50 hover:shadow-md transition-shadow">
-                <h3 className="text-xl font-semibold mb-3">{title}</h3>
-                <p className="text-base text-muted-foreground">{desc}</p>
+              <div key={title} className="p-5 sm:p-8 bg-background rounded-xl sm:rounded-2xl shadow-sm border border-border/50 hover:shadow-md transition-shadow">
+                <h3 className="text-lg sm:text-xl font-semibold mb-2 sm:mb-3">{title}</h3>
+                <p className="text-sm sm:text-base text-muted-foreground">{desc}</p>
               </div>
             ))}
           </div>
@@ -537,13 +537,13 @@ function App() {
       </section>
 
       {/* CTA */}
-      <section className="py-24 lg:py-32 relative overflow-hidden">
+      <section className="py-16 sm:py-24 lg:py-32 relative overflow-hidden">
         <div className="absolute inset-0 gradient-mesh" />
         <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-serif font-medium mb-8 leading-tight text-balance">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-serif font-medium mb-5 sm:mb-8 leading-tight text-balance">
             Turn your clothing, shoes, and bags into instant, natural-language search
           </h2>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
+          <p className="text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
             Best for boutiques selling apparel, shoes, and bags.
           </p>
         </div>
