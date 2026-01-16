@@ -83,23 +83,24 @@ function App() {
 
         {/* Mobile Menu */}
         {mobileMenuOpen && (
-          <div className="md:hidden bg-background border-b">
-            <div className="px-6 py-6 space-y-4">
-              <a href="#problem" className="block text-lg font-medium py-2" onClick={() => setMobileMenuOpen(false)}>
+          <div className="md:hidden absolute top-full left-0 right-0 bg-background/95 backdrop-blur-md border-b shadow-lg animate-in fade-in slide-in-from-top-1 duration-200">
+            <div className="px-6 py-8 space-y-4">
+              <a href="#problem" className="block text-xl font-medium py-2 border-b border-border/50" onClick={() => setMobileMenuOpen(false)}>
                 The Problem
               </a>
-              <a href="#how-it-works" className="block text-lg font-medium py-2" onClick={() => setMobileMenuOpen(false)}>
+              <a href="#how-it-works" className="block text-xl font-medium py-2 border-b border-border/50" onClick={() => setMobileMenuOpen(false)}>
                 How It Works
               </a>
-              <a href="#features" className="block text-lg font-medium py-2" onClick={() => setMobileMenuOpen(false)}>
+              <a href="#features" className="block text-xl font-medium py-2 border-b border-border/50" onClick={() => setMobileMenuOpen(false)}>
                 Features
               </a>
-              <a href="#use-cases" className="block text-lg font-medium py-2" onClick={() => setMobileMenuOpen(false)}>
+              <a href="#use-cases" className="block text-xl font-medium py-2 border-b border-border/50" onClick={() => setMobileMenuOpen(false)}>
                 Use Cases
               </a>
             </div>
           </div>
         )}
+
       </nav>
 
       {/* Hero Section */}
@@ -109,18 +110,20 @@ function App() {
           <div className="absolute bottom-20 left-10 w-96 h-96 bg-accent/5 rounded-full blur-3xl" />
         </div>
 
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-24 pb-16">
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-12 lg:pt-32 lg:pb-20">
+
           <div className="grid lg:grid-cols-[1fr_1.1fr] gap-12 lg:gap-16 items-center">
             <div className="space-y-8">
               <div className="space-y-6">
                 <Badge variant="secondary" className="text-sm font-medium px-4 py-1.5 rounded-full">
                   Vision-based search for boutiques
                 </Badge>
-                <h1 className="text-5xl sm:text-6xl lg:text-7xl font-serif font-medium leading-[1.1] text-balance">
+                <h1 className="text-4xl sm:text-6xl lg:text-7xl font-serif font-medium leading-[1.1] text-balance">
                   Sell by <span className="italic text-primary">vibe.</span>
                   <br />
                   Not by filters.
                 </h1>
+
                 <p className="text-xl text-muted-foreground max-w-xl leading-relaxed">
                   KhojIQ turns photos of clothing, shoes, and bags into instant, natural-language search—so you find the perfect match in seconds.
                 </p>
@@ -282,7 +285,9 @@ function App() {
           </div>
 
           {/* Steps */}
-          <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
+
+
             {[
               { step: 1, title: 'Capture', desc: 'Snap or upload items', icon: Camera },
               { step: 2, title: 'Auto-describe', desc: 'Generates rich, searchable copy', icon: Sparkles },
